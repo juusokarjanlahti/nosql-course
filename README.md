@@ -21,12 +21,42 @@ try {
 ### Insert Multiple Documents
 ```javascript
 db.books.insertMany([
-  { title: "War and Peace", author: "Leo Tolstoy", year: 1869, genres: ["Historical Fiction", "Classic", "Philosophical Fiction"], copies: 84, ebook: true },
-  { title: "The Lord of the Rings: The Fellowship of the Ring", author: "John Ronald Reuel Tolkien", year: 1954, genres: ["Fantasy", "Adventure", "Epic"], copies: 0, ebook: false },
-  { title: "Brave New World", author: "Aldous Huxley", year: 1931, genres: ["Dystopian", "Science Fiction", "Classic"], copies: 11, ebook: true },
-  { title: "The Hobbit", author: "John Ronald Reuel Tolkien", year: 1937, genres: ["Fantasy", "Classic"], copies: 17, ebook: false }
+  {
+    title: "War and Peace",
+    author: "Leo Tolstoy",
+    year: 1869,
+    genres: ["Historical Fiction", "Classic", "Philosophical Fiction"],
+    copies: 84,
+    ebook: true
+  },
+  {
+    title: "The Lord of the Rings: The Fellowship of the Ring",
+    author: "John Ronald Reuel Tolkien",
+    year: 1954,
+    genres: ["Fantasy", "Adventure", "Epic"],
+    copies: 0,
+    ebook: false
+  },
+  {
+    title: "Brave New World",
+    author: "Aldous Huxley",
+    year: 1931,
+    genres: ["Dystopian", "Science Fiction", "Classic"],
+    copies: 11,
+    ebook: true
+  },
+  {
+    title: "The Hobbit",
+    author: "John Ronald Reuel Tolkien",
+    year: 1937,
+    genres: ["Fantasy", "Classic"],
+    copies: 17,
+    ebook: false
+  }
 ]);
 ```
+
+
 
 ### List All Books
 ```javascript
@@ -191,18 +221,21 @@ use runescape_market
 ### Insert Player Data
 ```javascript
 try {
-   db.players.insertMany([
-{
-"username": "Zezima",
-"combat_level": 126,
-"account_type": "Regular" },
-    { "username": "Iron Bob",
-"combat_level": 89,
-"account_type": "Ironman"
-}, ]);
-} catch (e)
-    { print(e);
-};
+  db.players.insertMany([
+    {
+      username: "Zezima",
+      combat_level: 126,
+      account_type: "Regular"
+    },
+    {
+      username: "Iron Bob",
+      combat_level: 89,
+      account_type: "Ironman"
+    }
+  ]);
+} catch (e) {
+  print(e);
+}
 
 ```
 
@@ -211,25 +244,33 @@ try {
 try {
   db.listings.insertMany([
     {
-        "player_id": ObjectId("67c5b4c41058be0e7efeb3e1"),
-        "item_name": "Abyssal Whip",
-        "price": 2000000,
-        "quantity": 1,
-        "purchased": true,
-        "tags": ["abyssal", "slash"]
+      player_id: ObjectId("67c5b4c41058be0e7efeb3e1"),
+      item_name: "Abyssal Whip",
+      price: 2000000,
+      quantity: 1,
+      purchased: true,
+      tags: ["abyssal", "slash"]
     },
     {
-        "player_id": ObjectId("67c5b4c41058be0e7efeb3e2"),
-        "item_name": "Rune Scimitar",
-        "price": 15000,
-        "quantity": 2,
-        "purchased": false,
-        "tags": ["rune",
-        "scimitar", "slash"]
+      player_id: ObjectId("67c5b4c41058be0e7efeb3e2"),
+      item_name: "Rune Scimitar",
+      price: 15000,
+      quantity: 2,
+      purchased: false,
+      tags: ["rune", "scimitar", "slash"]
     }
   ]);
 } catch (e) {
   print(e);
 }
 ```
+
+![Näyttökuva 2025-03-03 161847](https://github.com/user-attachments/assets/c24ef556-0d64-4321-a7be-5d9aa88086c8)
+
+![Näyttökuva 2025-03-03 160439](https://github.com/user-attachments/assets/dedf2ab8-7d5d-4532-90c5-0d3fdcb86085)
+
+![Näyttökuva 2025-03-03 160455](https://github.com/user-attachments/assets/3f1abd1e-0a8c-4155-9a19-97a545320419)
+
+
+
 
