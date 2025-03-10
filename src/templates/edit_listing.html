@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Listing</title>
+</head>
+<body>
+    <h1>Edit Listing</h1>
+    <form method="post">
+        <label for="player_id">Player:</label>
+        <select id="player_id" name="player_id">
+            {% for player in players %}
+                <option value="{{ player['_id'] }}" {% if player['_id'] == listing['player_id'] %}selected{% endif %}>{{ player['username'] }}</option>
+            {% endfor %}
+        </select><br>
+        <label for="item_name">Item Name:</label>
+        <input type="text" id="item_name" name="item_name" value="{{ listing['item_name'] }}"><br>
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" value="{{ listing['price'] }}"><br>
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" name="quantity" value="{{ listing['quantity'] }}"><br>
+        <label for="purchased">Purchased (True/False):</label>
+        <input type="text" id="purchased" name="purchased" value="{{ listing['purchased'] }}"><br>
+        <label for="tags">Tags (comma separated):</label>
+        <input type="text" id="tags" name="tags" value="{{ listing['tags']|join(',') }}"><br>
+        <input type="submit" value="Update Listing">
+    </form>
+    <a href="{{ url_for('listings') }}">Back to Listings</a>
+</body>
+</html>

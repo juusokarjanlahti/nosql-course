@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Player</title>
+</head>
+<body>
+    <h1>Add Player</h1>
+    <form method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="combat_level">Combat Level:</label>
+        <input type="text" id="combat_level" name="combat_level"><br>
+        <label for="account_type">Account Type:</label>
+        <input type="text" id="account_type" name="account_type"><br>
+        <input type="submit" value="Add Player">
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

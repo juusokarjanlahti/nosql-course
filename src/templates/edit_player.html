@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Player</title>
+</head>
+<body>
+    <h1>Edit Player</h1>
+    <form method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="{{ player['username'] }}"><br>
+        <label for="combat_level">Combat Level:</label>
+        <input type="text" id="combat_level" name="combat_level" value="{{ player['combat_level'] }}"><br>
+        <label for="account_type">Account Type:</label>
+        <input type="text" id="account_type" name="account_type" value="{{ player['account_type'] }}"><br>
+        <input type="submit" value="Update Player">
+    </form>
+    <a href="{{ url_for('players') }}">Back to Players</a>
+</body>
+</html>

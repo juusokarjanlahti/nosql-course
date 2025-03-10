@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Players</title>
+</head>
+<body>
+    <h1>Players</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Combat Level</th>
+                <th>Account Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in players %}
+                <tr>
+                    <td>{{ player.username }}</td>
+                    <td>{{ player.combat_level }}</td>
+                    <td>{{ player.account_type }}</td>
+                    <td>
+                        <a href="{{ url_for('edit_player_route', player_id=player._id) }}">Edit</a>
+                        <a href="{{ url_for('delete_player_route', player_id=player._id) }}">Delete</a>
+                        <a href="{{ url_for('player_listings_route', player_id=player._id) }}">View Listings</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('add_player_route') }}">Add Player</a><br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
